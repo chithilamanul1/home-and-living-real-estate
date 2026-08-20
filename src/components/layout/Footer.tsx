@@ -34,8 +34,11 @@ export function Footer() {
             >
                 <div className="mx-auto grid max-w-[1160px] gap-10 lg:grid-cols-[1.6fr_1fr_1fr_1.3fr]">
                     <div>
-                        <Link to="/" className="inline-block flex items-center justify-center w-56 h-24 -ml-4 -mt-4">
-                            <img src="/logo.png" alt="Seranex Properties" className="h-56 w-auto scale-[2.5] object-contain" />
+                        <Link to="/" className="inline-block flex items-center gap-2">
+                            <div className="flex items-center justify-center w-16 h-16">
+                                <img src="/logo.png" alt="" className="h-16 w-auto scale-125 object-contain" />
+                            </div>
+                            <span className="text-xl font-semibold tracking-tight text-ink-900">Seranex Properties</span>
                         </Link>
                         <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-700">
                             Your trusted real estate partner in Sri Lanka. We help you buy, sell and rent land,
