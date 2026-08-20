@@ -1,0 +1,19 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #ffffff;
+  color: #0d1b34;
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible {
+  outline: 2px solid #1b54d6;
+  outline-offset: 2px;
+}

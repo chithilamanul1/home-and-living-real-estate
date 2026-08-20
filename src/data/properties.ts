@@ -1,0 +1,145 @@
+import { Property } from '../types/property'
+
+export const IMAGES = {
+    hero: 'https://cdn.magicpatterns.com/patterns/generated-images/b5234cb4-cea7-417d-a246-441bea207b0d.jpg',
+    heroVilla:
+        'https://cdn.magicpatterns.com/patterns/generated-images/27067e7c-dd43-4c46-aaba-8b2db277b9d4.jpg',
+    villa: 'https://cdn.magicpatterns.com/patterns/generated-images/604e6ce9-f3f0-46a4-af70-3aaf539df3a6.jpg',
+    apartment:
+        'https://cdn.magicpatterns.com/patterns/generated-images/fd272afe-3949-4ce1-950f-46140ff03688.jpg',
+    office:
+        'https://cdn.magicpatterns.com/patterns/generated-images/612249ea-3112-4268-8e5b-b3751729a146.jpg',
+    land: 'https://cdn.magicpatterns.com/patterns/generated-images/062e6379-27f1-4b85-88c5-44fd5bd01f20.jpg',
+}
+
+export const seedProperties: Property[] = [
+    {
+        id: 'p-1001',
+        title: 'Modern Two-Storey House with Garden in Nugegoda',
+        category: 'House',
+        status: 'For Sale',
+        price: 45000000,
+        address: '23 Pagoda Road',
+        city: 'Nugegoda, Colombo',
+        beds: 4,
+        baths: 3,
+        area: 8,
+        areaUnit: 'Perches',
+        description:
+            'A beautiful two-storey house in a quiet neighbourhood in Nugegoda. Close to schools, banks and supermarkets. The house has a nice garden, covered parking for two cars, and modern finishes throughout. All rooms are spacious and well-ventilated.',
+        features: ['Covered parking', 'Garden area', 'Tiled throughout', 'Close to main road'],
+        images: [
+            'https://cdn.magicpatterns.com/patterns/generated-images/604e6ce9-f3f0-46a4-af70-3aaf539df3a6.jpg',
+            'https://cdn.magicpatterns.com/patterns/generated-images/b5234cb4-cea7-417d-a246-441bea207b0d.jpg',
+        ],
+        featured: true,
+        createdAt: '2026-07-02',
+    },
+    {
+        id: 'p-1002',
+        title: 'Luxury Apartment in Colombo 07 with City View',
+        category: 'Apartment',
+        status: 'For Rent',
+        price: 150000,
+        priceSuffix: '/ Month',
+        address: '456 Bauddhaloka Mawatha',
+        city: 'Colombo 07',
+        beds: 2,
+        baths: 2,
+        area: 1200,
+        areaUnit: 'Sq Ft',
+        description:
+            'Fully furnished apartment on the 18th floor in the heart of Colombo 07. Beautiful city views, 24-hour security, swimming pool and gym included. Walking distance to shops, restaurants and offices. Perfect for professionals or small families.',
+        features: ['24/7 Security', 'Swimming pool', 'Gym access', 'Fully furnished'],
+        images: [
+            'https://cdn.magicpatterns.com/patterns/generated-images/fd272afe-3949-4ce1-950f-46140ff03688.jpg',
+        ],
+        featured: true,
+        createdAt: '2026-07-14',
+    },
+    {
+        id: 'p-1003',
+        title: 'Commercial Office Space in Colombo Fort',
+        category: 'Commercial',
+        status: 'For Sale',
+        price: 85000000,
+        address: '12 York Street',
+        city: 'Colombo 01 (Fort)',
+        beds: 0,
+        baths: 2,
+        area: 3000,
+        areaUnit: 'Sq Ft',
+        description:
+            'A full floor of office space in a well-maintained building in Colombo Fort. Ready to move in with meeting rooms, air conditioning and backup power. Good for any business looking for a prime Colombo location with easy access to banks and government offices.',
+        features: ['Air conditioned', 'Backup generator', '24/7 access', 'Parking available'],
+        images: [
+            'https://cdn.magicpatterns.com/patterns/generated-images/612249ea-3112-4268-8e5b-b3751729a146.jpg',
+        ],
+        featured: true,
+        createdAt: '2026-07-21',
+    },
+    {
+        id: 'p-1004',
+        title: 'Flat Land Plot with Clear Title in Kurunegala',
+        category: 'Land Plot',
+        status: 'For Sale',
+        price: 3500000,
+        address: 'Bingiriya Road, Near Town',
+        city: 'Kurunegala',
+        beds: 0,
+        baths: 0,
+        area: 20,
+        areaUnit: 'Perches',
+        description:
+            'A flat, rectangular land plot just 2 km from Kurunegala town. Clear title deed, electricity and water available at the boundary. Suitable for building a house or small business. The land faces a wide tar road.',
+        features: ['Clear title deed', 'Road frontage', 'Water & electricity nearby', 'Flat terrain'],
+        images: [
+            'https://cdn.magicpatterns.com/patterns/generated-images/062e6379-27f1-4b85-88c5-44fd5bd01f20.jpg',
+        ],
+        featured: false,
+        createdAt: '2026-08-01',
+    },
+    {
+        id: 'p-1005',
+        title: 'Family Home Near the Beach in Galle',
+        category: 'House',
+        status: 'For Sale',
+        price: 28000000,
+        address: '7 Lighthouse Street',
+        city: 'Galle',
+        beds: 3,
+        baths: 2,
+        area: 10,
+        areaUnit: 'Perches',
+        description:
+            'A charming family home just a short walk from Galle Fort and the beach. The house has an open kitchen, a lovely veranda and a small garden. Very peaceful area, good for families or as a holiday home. Close to schools and hospital.',
+        features: ['Near the beach', 'Open veranda', 'Small garden', 'Quiet neighbourhood'],
+        images: [
+            'https://cdn.magicpatterns.com/patterns/generated-images/b5234cb4-cea7-417d-a246-441bea207b0d.jpg',
+        ],
+        featured: false,
+        createdAt: '2026-08-06',
+    },
+    {
+        id: 'p-1006',
+        title: 'Studio Apartment for Rent in Dehiwala',
+        category: 'Apartment',
+        status: 'For Rent',
+        price: 45000,
+        priceSuffix: '/ Month',
+        address: '9 Station Road',
+        city: 'Dehiwala, Colombo',
+        beds: 1,
+        baths: 1,
+        area: 550,
+        areaUnit: 'Sq Ft',
+        description:
+            'A clean, well-maintained studio apartment close to Dehiwala railway station. Comes fully furnished with kitchen appliances, bed and wardrobe. Water bill included in the rent. Perfect for a single person or couple working in Colombo.',
+        features: ['Fully furnished', 'Water bill included', 'Near railway station', 'Secure building'],
+        images: [
+            'https://cdn.magicpatterns.com/patterns/generated-images/fd272afe-3949-4ce1-950f-46140ff03688.jpg',
+        ],
+        featured: false,
+        createdAt: '2026-08-11',
+    },
+]

@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.*
+.env.*.local
+.DS_Store
+server/data/*.json
+!server/data/properties.json
+!server/data/enquiries.json
