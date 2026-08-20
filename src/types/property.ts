@@ -9,6 +9,7 @@ export type PropertyCategory =
 
 export interface Property {
     id: string
+    slug?: string
     title: string
     category: PropertyCategory
     status: PropertyStatus

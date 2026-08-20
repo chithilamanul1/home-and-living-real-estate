@@ -11,6 +11,14 @@ const __dirname = dirname(__filename)
 const app = express()
 const PORT = process.env.PORT || 3001
 
+import mongoose from 'mongoose'
+
+const MONGO_URI = 'mongodb://mongo:fvquwo6ronfruznx@test-memoryapp-whqlxd:27017/?authSource=admin&directConnection=true'
+
+mongoose.connect(MONGO_URI)
+    .then(() => console.log('✅ Connected to MongoDB'))
+    .catch((err) => console.error('❌ MongoDB connection error:', err))
+
 // Middleware
 app.use(cors())
 app.use(express.json({ limit: '10mb' }))
