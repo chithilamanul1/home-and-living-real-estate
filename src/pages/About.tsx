@@ -26,7 +26,7 @@ const timeline = [
     {
         year: '2016',
         title: 'Started with land sales',
-        body: 'Land & Living started as a small team helping families in the Western Province find good land with clean titles.',
+        body: 'Seranex Properties started as a small team helping families in the Western Province find good land with clean titles.',
     },
     {
         year: '2019',
@@ -58,14 +58,14 @@ export function About() {
             <PageHero
                 eyebrow="About us"
                 title="A real estate company built on trust and honesty."
-                intro="We started Land & Living because we believe buying property should be simple, safe and stress-free. Every land title is checked, every price is fair, and every customer gets personal attention."
+                intro="We started Seranex Properties because we believe buying property should be simple, safe and stress-free. Every land title is checked, every price is fair, and every customer gets personal attention."
             />
 
             <section className="mx-auto max-w-[1240px] px-5 py-20 lg:px-8">
                 <div className="overflow-hidden rounded-[26px]">
                     <img
                         src={IMAGES.villa}
-                        alt="A beautiful property listed by Land & Living Real Estate"
+                        alt="A beautiful property listed by Seranex Properties Real Estate"
                         className="aspect-[21/9] w-full object-cover"
                     />
                 </div>

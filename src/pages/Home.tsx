@@ -247,7 +247,7 @@ export function Home() {
                         />
                     </div>
                     <div>
-                        <p className="text-[13px] font-medium text-ink-400">Why choose Land & Living?</p>
+                        <p className="text-[13px] font-medium text-ink-400">Why choose Seranex Properties?</p>
                         <h2 className="mt-3 text-[30px] font-medium leading-[1.1] tracking-display text-ink-900 lg:text-[40px]">
                             We handle the hard parts so you don't have to.
                         </h2>

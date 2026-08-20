@@ -25,5 +25,5 @@ app.get('/api/health', (_req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`✅ Land & Living API server running on http://localhost:${PORT}`)
+    console.log(`✅ Seranex Properties API server running on http://localhost:${PORT}`)
 })

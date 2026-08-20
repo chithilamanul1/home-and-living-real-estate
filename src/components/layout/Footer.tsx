@@ -34,9 +34,9 @@ export function Footer() {
             >
                 <div className="mx-auto grid max-w-[1160px] gap-10 lg:grid-cols-[1.6fr_1fr_1fr_1.3fr]">
                     <div>
-                        <p className="text-[22px] font-medium tracking-display text-ink-900">
-                            Land<span className="text-brand-600">&</span>Living
-                        </p>
+                        <Link to="/" className="inline-block">
+                            <img src="/logo.png" alt="Seranex Properties" className="h-14 w-auto" />
+                        </Link>
                         <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-700">
                             Your trusted real estate partner in Sri Lanka. We help you buy, sell and rent land,
                             homes and commercial spaces — with clear titles and honest advice.
@@ -78,8 +78,8 @@ export function Footer() {
                             </li>
                             <li className="flex gap-3">
                                 <MailIcon className="h-4 w-4 shrink-0 text-ink-400" aria-hidden="true" />
-                                <a href="mailto:hello@landandliving.lk" className="hover:text-ink-900">
-                                    hello@landandliving.lk
+                                <a href="mailto:hello@seranexproperties.lk" className="hover:text-ink-900">
+                                    hello@seranexproperties.lk
                                 </a>
                             </li>
                         </ul>
@@ -87,7 +87,7 @@ export function Footer() {
                 </div>
 
                 <div className="mx-auto mt-12 flex max-w-[1160px] flex-col gap-2 border-t border-white/60 pt-5 text-xs text-ink-500 sm:flex-row sm:items-center sm:justify-between">
-                    <p>© {new Date().getFullYear()} Land and Living Real Estate. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Seranex Properties Real Estate. All rights reserved.</p>
                     <p>Licensed property broker · Sri Lanka</p>
                 </div>
             </div>

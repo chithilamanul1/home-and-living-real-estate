@@ -16,7 +16,7 @@ import { formatPrice } from '../utils/format'
 type Mode = { type: 'list' } | { type: 'create' } | { type: 'edit'; property: Property }
 
 function AdminLogin({ onAuth }: { onAuth: () => void }) {
-    const [email, setEmail] = useState('admin@landandliving.lk')
+    const [email, setEmail] = useState('admin@seranexproperties.lk')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
 

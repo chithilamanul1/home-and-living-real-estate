@@ -9,7 +9,7 @@ import React, {
 import { Property, PropertyDraft } from '../types/property'
 import { seedProperties } from '../data/properties'
 
-const STORAGE_KEY = 'landandliving.properties.v1'
+const STORAGE_KEY = 'seranexproperties.properties.v1'
 
 interface PropertyContextValue {
     properties: Property[]

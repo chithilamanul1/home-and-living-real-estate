@@ -21,8 +21,8 @@ export function Header() {
     return (
         <header className="sticky top-0 z-50 w-full bg-white/85 backdrop-blur">
             <div className="mx-auto flex h-[68px] max-w-[1240px] items-center gap-8 px-5 lg:px-8">
-                <Link to="/" className="shrink-0 text-[19px] font-medium tracking-display text-ink-900">
-                    Land<span className="text-brand-500">&</span>Living
+                <Link to="/" className="shrink-0">
+                    <img src="/logo.png" alt="Seranex Properties" className="h-12 w-auto" />
                 </Link>
 
                 <nav aria-label="Primary" className="ml-auto hidden items-center gap-1 lg:flex">

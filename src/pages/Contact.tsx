@@ -237,10 +237,10 @@ export function Contact() {
                         <MailIcon className="h-5 w-5 text-brand-600" aria-hidden="true" />
                         <p className="mt-3 text-sm text-ink-500">General enquiries</p>
                         <a
-                            href="mailto:hello@landandliving.lk"
+                            href="mailto:hello@seranexproperties.lk"
                             className="text-[16px] font-medium text-ink-900 hover:underline"
                         >
-                            hello@landandliving.lk
+                            hello@seranexproperties.lk
                         </a>
                         <p className="mt-5 flex items-center gap-2 text-sm text-ink-700">
                             <ClockIcon className="h-4 w-4 text-ink-400" aria-hidden="true" />

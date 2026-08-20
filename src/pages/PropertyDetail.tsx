@@ -155,10 +155,10 @@ export function PropertyDetail() {
 
                         <div className="mt-7 flex items-center gap-3 rounded-[18px] bg-white/80 p-3.5">
                             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-ink-900 text-sm font-medium text-white">
-                                LL
+                                SP
                             </span>
                             <div>
-                                <p className="text-sm font-medium text-ink-900">Land & Living Team</p>
+                                <p className="text-sm font-medium text-ink-900">Seranex Properties Team</p>
                                 <p className="text-[12px] text-ink-500">Property advisor</p>
                             </div>
                         </div>
