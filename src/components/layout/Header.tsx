@@ -21,11 +21,11 @@ export function Header() {
     return (
         <header className="sticky top-0 z-50 w-full bg-white/85 backdrop-blur">
             <div className="mx-auto flex h-[84px] max-w-[1240px] items-center gap-8 px-5 lg:px-8">
-                <Link to="/" className="shrink-0 flex items-center">
-                    <div className="flex items-center justify-center w-24 h-full">
-                        <img src="/logo.png" alt="" className="h-32 w-auto scale-[2.5] object-contain" />
+                <Link to="/" className="shrink-0 flex items-center gap-1">
+                    <div className="flex items-center justify-center w-16 h-full">
+                        <img src="/logo.png" alt="" className="h-16 w-auto scale-125 object-contain" />
                     </div>
-                    <span className="text-xl font-semibold tracking-tight text-ink-900">Seranex Properties</span>
+                    <span className="text-lg font-semibold tracking-tight text-ink-900">Seranex Properties</span>
                 </Link>
 
                 <nav aria-label="Primary" className="ml-auto hidden items-center gap-1 lg:flex">
