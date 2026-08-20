@@ -35,7 +35,7 @@ export function Footer() {
                 <div className="mx-auto grid max-w-[1160px] gap-10 lg:grid-cols-[1.6fr_1fr_1fr_1.3fr]">
                     <div>
                         <Link to="/" className="inline-block">
-                            <img src="/logo.png" alt="Seranex Properties" className="h-14 w-auto" />
+                            <img src="/logo.png" alt="Seranex Properties" className="h-24 w-auto" />
                         </Link>
                         <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-700">
                             Your trusted real estate partner in Sri Lanka. We help you buy, sell and rent land,
