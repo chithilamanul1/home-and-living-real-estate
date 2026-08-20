@@ -35,11 +35,6 @@ const offices = [
         address: 'No 20 A amuna Rd., Seeduwa',
         phone: '+94 78 522 0563',
     },
-    {
-        city: 'Kandy',
-        address: '15 Peradeniya Road, Kandy',
-        phone: '+94 78 522 0563',
-    },
 ]
 
 const inputClass =
