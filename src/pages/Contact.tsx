@@ -31,8 +31,8 @@ const interests = [
 
 const offices = [
     {
-        city: 'Colombo (Head office)',
-        address: '42 Galle Road, Level 3, Colombo 03',
+        city: 'Seeduwa (Head office)',
+        address: 'No 20 A amuna Rd., Seeduwa',
         phone: '+94 78 522 0563',
     },
     {

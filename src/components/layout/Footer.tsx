@@ -66,9 +66,9 @@ export function Footer() {
                         <ul className="mt-4 space-y-3 text-sm text-ink-700">
                             <li className="flex gap-3">
                                 <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-ink-400" aria-hidden="true" />
-                                42 Galle Road, Level 3
+                                No 20 A amuna Rd.
                                 <br />
-                                Colombo 03, Sri Lanka
+                                Seeduwa, Sri Lanka
                             </li>
                             <li className="flex gap-3">
                                 <PhoneIcon className="h-4 w-4 shrink-0 text-ink-400" aria-hidden="true" />

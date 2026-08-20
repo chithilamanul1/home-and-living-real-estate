@@ -22,8 +22,8 @@ function AdminLogin({ onAuth }: { onAuth: () => void }) {
 
     function handleSubmit(event: React.FormEvent) {
         event.preventDefault()
-        if (password.length < 4) {
-            setError('Please enter a password (for demo: type any 4 or more characters).')
+        if (email !== 'admin@seranexproperties.lk' || password !== 'admin123') {
+            setError('Invalid email or password.')
             return
         }
         onAuth()
@@ -101,16 +101,24 @@ export function Admin() {
         window.setTimeout(() => setToast(''), 3000)
     }
 
-    function handleCreate(draft: PropertyDraft) {
-        addProperty(draft)
-        setMode({ type: 'list' })
-        flash('Property published! It is now live on the properties page.')
+    async function handleCreate(draft: PropertyDraft) {
+        try {
+            await addProperty(draft)
+            setMode({ type: 'list' })
+            flash('Property published! It is now live on the properties page.')
+        } catch (err) {
+            flash('Error publishing property. Please try again.')
+        }
     }
 
-    function handleUpdate(id: string, draft: PropertyDraft) {
-        updateProperty(id, draft)
-        setMode({ type: 'list' })
-        flash('Changes saved.')
+    async function handleUpdate(id: string, draft: PropertyDraft) {
+        try {
+            await updateProperty(id, draft)
+            setMode({ type: 'list' })
+            flash('Changes saved.')
+        } catch (err) {
+            flash('Error saving changes. Please try again.')
+        }
     }
 
     return (
@@ -192,7 +200,7 @@ export function Admin() {
                                                         />
                                                         <div>
                                                             <Link
-                                                                to={`/properties/${property.id}`}
+                                                                to={`/properties/${property.slug || property.id}`}
                                                                 className="text-sm font-medium text-ink-900 hover:text-brand-600"
                                                             >
                                                                 {property.title}

@@ -23,7 +23,7 @@ export function PropertyCard({ property }: { property: Property }) {
                 <p className="text-[13px] text-ink-400">{property.category}</p>
                 <h3 className="mt-1.5 text-[17px] font-medium leading-snug tracking-display text-ink-900">
                     <Link
-                        to={`/properties/${property.id}`}
+                        to={`/properties/${property.slug || property.id}`}
                         className="transition-colors duration-150 ease-out hover:text-brand-600"
                     >
                         <span className="absolute inset-0" aria-hidden="true" />

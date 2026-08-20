@@ -21,8 +21,11 @@ export function Header() {
     return (
         <header className="sticky top-0 z-50 w-full bg-white/85 backdrop-blur">
             <div className="mx-auto flex h-[84px] max-w-[1240px] items-center gap-8 px-5 lg:px-8">
-                <Link to="/" className="shrink-0 flex items-center justify-center w-48 h-full">
-                    <img src="/logo.png" alt="Seranex Properties" className="h-48 w-auto scale-[3] object-contain" />
+                <Link to="/" className="shrink-0 flex items-center">
+                    <div className="flex items-center justify-center w-24 h-full">
+                        <img src="/logo.png" alt="" className="h-32 w-auto scale-[2.5] object-contain" />
+                    </div>
+                    <span className="text-xl font-semibold tracking-tight text-ink-900">Seranex Properties</span>
                 </Link>
 
                 <nav aria-label="Primary" className="ml-auto hidden items-center gap-1 lg:flex">
@@ -42,12 +45,7 @@ export function Header() {
                 </nav>
 
                 <div className="ml-auto flex items-center gap-2 lg:ml-0">
-                    <Link
-                        to="/admin"
-                        className="hidden rounded-full px-4 py-2 text-[14px] text-ink-500 transition-colors duration-150 ease-out hover:text-ink-900 sm:block"
-                    >
-                        Admin
-                    </Link>
+                    {/* Admin link removed for public visitors */}
                     <Link
                         to="/contact"
                         className="hidden rounded-full bg-ink-900 px-5 py-2.5 text-[14px] font-medium text-white transition-colors duration-150 ease-out hover:bg-ink-700 sm:block"
@@ -82,9 +80,7 @@ export function Header() {
                                 {item.label}
                             </NavLink>
                         ))}
-                        <Link to="/admin" className="block rounded-xl px-3 py-2.5 text-sm text-ink-500">
-                            Admin panel
-                        </Link>
+                        {/* Admin link removed for public visitors */}
                     </nav>
                 </div>
             )}
