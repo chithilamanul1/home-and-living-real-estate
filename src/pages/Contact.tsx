@@ -33,12 +33,12 @@ const offices = [
     {
         city: 'Colombo (Head office)',
         address: '42 Galle Road, Level 3, Colombo 03',
-        phone: '+94 11 234 5678',
+        phone: '+94 78 522 0563',
     },
     {
         city: 'Kandy',
         address: '15 Peradeniya Road, Kandy',
-        phone: '+94 81 234 5678',
+        phone: '+94 78 522 0563',
     },
 ]
 
@@ -165,7 +165,7 @@ export function Contact() {
                                     value={form.phone}
                                     onChange={(e) => update('phone', e.target.value)}
                                     className={inputClass}
-                                    placeholder="+94 77 123 4567"
+                                    placeholder="+94 78 522 0563"
                                 />
                             </label>
 
@@ -220,12 +220,15 @@ export function Contact() {
                             </p>
                             <p className="mt-2.5 flex gap-3 text-sm text-ink-500">
                                 <PhoneIcon className="h-4 w-4 shrink-0 text-ink-400" aria-hidden="true" />
-                                <a
-                                    href={`tel:${office.phone.replace(/[^+\d]/g, '')}`}
-                                    className="hover:text-ink-900"
-                                >
-                                    {office.phone}
-                                </a>
+                                <div>
+                                    <a
+                                        href={`tel:${office.phone.replace(/[^+\d]/g, '')}`}
+                                        className="hover:text-ink-900"
+                                    >
+                                        {office.phone}
+                                    </a>
+                                    <span className="ml-2 text-[12px] text-ink-400">(WhatsApp)</span>
+                                </div>
                             </p>
                         </div>
                     ))}

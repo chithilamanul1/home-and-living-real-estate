@@ -72,9 +72,12 @@ export function Footer() {
                             </li>
                             <li className="flex gap-3">
                                 <PhoneIcon className="h-4 w-4 shrink-0 text-ink-400" aria-hidden="true" />
-                                <a href="tel:+94112345678" className="hover:text-ink-900">
-                                    +94 11 234 5678
-                                </a>
+                                <div>
+                                    <a href="tel:+94785220563" className="hover:text-ink-900">
+                                        +94 78 522 0563
+                                    </a>
+                                    <span className="ml-2 text-[12px] text-ink-400">(WhatsApp available)</span>
+                                </div>
                             </li>
                             <li className="flex gap-3">
                                 <MailIcon className="h-4 w-4 shrink-0 text-ink-400" aria-hidden="true" />
@@ -88,7 +91,9 @@ export function Footer() {
 
                 <div className="mx-auto mt-12 flex max-w-[1160px] flex-col gap-2 border-t border-white/60 pt-5 text-xs text-ink-500 sm:flex-row sm:items-center sm:justify-between">
                     <p>© {new Date().getFullYear()} Seranex Properties Real Estate. All rights reserved.</p>
-                    <p>Licensed property broker · Sri Lanka</p>
+                    <p>
+                        Licensed property broker · Sri Lanka | Made by <a href="https://seranex.lk" target="_blank" rel="noopener noreferrer" className="font-medium text-ink-900 hover:underline">Seranex.lk</a>
+                    </p>
                 </div>
             </div>
         </footer>

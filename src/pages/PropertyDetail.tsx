@@ -164,11 +164,11 @@ export function PropertyDetail() {
                         </div>
 
                         <a
-                            href="tel:+94112345678"
+                            href="tel:+94785220563"
                             className="mt-4 flex items-center justify-center gap-2 rounded-full bg-ink-900 px-5 py-3.5 text-sm font-medium text-white transition-colors duration-150 ease-out hover:bg-ink-700"
                         >
                             <PhoneIcon className="h-4 w-4" aria-hidden="true" />
-                            Call us about this property
+                            Call or WhatsApp us
                         </a>
                         <Link
                             to="/contact"
