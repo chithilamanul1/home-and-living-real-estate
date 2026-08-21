@@ -38,7 +38,8 @@ app.use('/api', async (req, res, next) => {
         console.error('❌ MongoDB connection error:', err)
         res.status(500).json({
             error: 'Database connection failed',
-            details: 'The server could not connect to the MongoDB database. Please ensure the MONGO_URI environment variable is set correctly in Vercel.'
+            details: 'The server could not connect to the MongoDB database. Please ensure the MONGO_URI environment variable is set correctly in Vercel.',
+            errorMessage: err.message
         })
     }
 })
