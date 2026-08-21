@@ -23,6 +23,17 @@ mongoose.connect(MONGO_URI)
 app.use(cors())
 app.use(express.json({ limit: '10mb' }))
 
+// Check database connection before handling API routes
+app.use('/api', (req, res, next) => {
+    if (mongoose.connection.readyState !== 1) {
+        return res.status(500).json({
+            error: 'Database connection failed',
+            details: 'The server could not connect to the MongoDB database. Please ensure the MONGO_URI environment variable is set correctly in Vercel.'
+        })
+    }
+    next()
+})
+
 // API Routes
 app.use('/api/properties', propertiesRouter)
 app.use('/api/contact', contactRouter)
