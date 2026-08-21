@@ -16,14 +16,14 @@ import { formatPrice } from '../utils/format'
 type Mode = { type: 'list' } | { type: 'create' } | { type: 'edit'; property: Property }
 
 function AdminLogin({ onAuth }: { onAuth: () => void }) {
-    const [email, setEmail] = useState('admin@seranexproperties.lk')
+    const [email, setEmail] = useState('seranex')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
 
     function handleSubmit(event: React.FormEvent) {
         event.preventDefault()
-        if (email !== 'admin@seranexproperties.lk' || password !== 'admin123') {
-            setError('Invalid email or password.')
+        if (email !== 'seranex' || password !== 'seranex') {
+            setError('Invalid username or password.')
             return
         }
         onAuth()
@@ -41,9 +41,9 @@ function AdminLogin({ onAuth }: { onAuth: () => void }) {
 
             <form onSubmit={handleSubmit} className="mt-8 grid gap-4">
                 <label className="block">
-                    <span className="text-[13px] text-ink-500">Email</span>
+                    <span className="text-[13px] text-ink-500">Username</span>
                     <input
-                        type="email"
+                        type="text"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="mt-1.5 w-full rounded-[16px] bg-mist px-4 py-3 text-sm text-ink-900 outline-none focus:ring-1 focus:ring-brand-300"

@@ -69,23 +69,25 @@ export function Contact() {
         setStatus('submitting')
 
         try {
-            const res = await fetch('/api/contact', {
+            const res = await fetch('https://formsubmit.co/ajax/laksmangunasekara05@gamil.com', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(form),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    ...form,
+                    _subject: "New Contact Form Submission from Seranex Properties"
+                }),
             })
             if (res.ok) {
                 setStatus('success')
                 setForm(initialForm)
             } else {
-                // Fallback to client-side success if backend is not running
-                setStatus('success')
-                setForm(initialForm)
+                setStatus('error')
             }
         } catch {
-            // Backend not available — still show success for demo
-            setStatus('success')
-            setForm(initialForm)
+            setStatus('error')
         }
     }
 
