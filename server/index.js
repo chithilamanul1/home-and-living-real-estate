@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3001
 
 import mongoose from 'mongoose'
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://chithilamanul1%40gmail.com:chithila123%40@187.77.128.167:27017/?authSource=admin&directConnection=true'
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://chithilamanul1%40gmail.com:1234@187.77.128.167:27017/?authSource=admin&directConnection=true'
 
 let cachedDb = null
 
