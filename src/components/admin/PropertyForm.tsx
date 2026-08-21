@@ -54,17 +54,53 @@ export function PropertyForm({ initial, onSubmit, onCancel }: PropertyFormProps)
         setErrors((prev) => ({ ...prev, [key]: '' }))
     }
 
-    function handleFiles(files: FileList | null) {
-        if (!files) return
-        Array.from(files).forEach((file) => {
+    function compressImage(file: File): Promise<string> {
+        return new Promise((resolve) => {
             const reader = new FileReader()
-            reader.onload = () => {
-                if (typeof reader.result === 'string') {
-                    setDraft((prev) => ({ ...prev, images: [...prev.images, reader.result as string] }))
+            reader.onload = (e) => {
+                const img = new Image()
+                img.onload = () => {
+                    const canvas = document.createElement('canvas')
+                    let width = img.width
+                    let height = img.height
+
+                    const MAX_WIDTH = 1200
+                    const MAX_HEIGHT = 1200
+
+                    if (width > height) {
+                        if (width > MAX_WIDTH) {
+                            height = Math.round((height * MAX_WIDTH) / width)
+                            width = MAX_WIDTH
+                        }
+                    } else {
+                        if (height > MAX_HEIGHT) {
+                            width = Math.round((width * MAX_HEIGHT) / height)
+                            height = MAX_HEIGHT
+                        }
+                    }
+
+                    canvas.width = width
+                    canvas.height = height
+                    const ctx = canvas.getContext('2d')
+                    ctx?.drawImage(img, 0, 0, width, height)
+
+                    const dataUrl = canvas.toDataURL('image/jpeg', 0.7)
+                    resolve(dataUrl)
                 }
+                img.src = e.target?.result as string
             }
             reader.readAsDataURL(file)
         })
+    }
+
+    async function handleFiles(files: FileList | null) {
+        if (!files) return
+        for (const file of Array.from(files)) {
+            if (file.type.startsWith('image/')) {
+                const compressed = await compressImage(file)
+                setDraft((prev) => ({ ...prev, images: [...prev.images, compressed] }))
+            }
+        }
         if (fileRef.current) fileRef.current.value = ''
     }
 
