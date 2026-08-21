@@ -15,23 +15,32 @@ import mongoose from 'mongoose'
 
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://mongo:fvquwo6ronfruznx@test-memoryapp-whqlxd:27017/?authSource=admin&directConnection=true'
 
-mongoose.connect(MONGO_URI)
-    .then(() => console.log('✅ Connected to MongoDB'))
-    .catch((err) => console.error('❌ MongoDB connection error:', err))
+let cachedDb = null
+
+async function connectToDatabase() {
+    if (cachedDb) return cachedDb
+    const db = await mongoose.connect(MONGO_URI)
+    cachedDb = db
+    console.log('✅ Connected to MongoDB')
+    return db
+}
 
 // Middleware
 app.use(cors())
 app.use(express.json({ limit: '10mb' }))
 
-// Check database connection before handling API routes
-app.use('/api', (req, res, next) => {
-    if (mongoose.connection.readyState !== 1) {
-        return res.status(500).json({
+// Ensure database is connected before handling any API routes
+app.use('/api', async (req, res, next) => {
+    try {
+        await connectToDatabase()
+        next()
+    } catch (err) {
+        console.error('❌ MongoDB connection error:', err)
+        res.status(500).json({
             error: 'Database connection failed',
             details: 'The server could not connect to the MongoDB database. Please ensure the MONGO_URI environment variable is set correctly in Vercel.'
         })
     }
-    next()
 })
 
 // API Routes
