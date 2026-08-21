@@ -1,17 +1,7 @@
 import { Router } from 'express'
-import { existsSync, mkdirSync, writeFileSync } from 'fs'
-import { fileURLToPath } from 'url'
-import { dirname, join } from 'path'
-import { randomBytes } from 'crypto'
 import { Property } from '../models/Property.js'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
 const router = Router()
-const UPLOADS_DIR = join(__dirname, '..', '..', 'public', 'uploads')
-
-if (!existsSync(UPLOADS_DIR)) mkdirSync(UPLOADS_DIR, { recursive: true })
 
 function generateSlug(title) {
     return title
@@ -23,17 +13,8 @@ function generateSlug(title) {
 function processImages(images) {
     if (!Array.isArray(images)) return []
     return images.map((img) => {
-        if (typeof img === 'string' && img.startsWith('data:image')) {
-            const matches = img.match(/^data:image\/([a-zA-Z0-9]+);base64,(.+)$/)
-            if (!matches) return img
-            const ext = matches[1] === 'jpeg' ? 'jpg' : matches[1]
-            const data = matches[2]
-            const buffer = Buffer.from(data, 'base64')
-            const filename = `${Date.now()}-${randomBytes(4).toString('hex')}.${ext}`
-            const filepath = join(UPLOADS_DIR, filename)
-            writeFileSync(filepath, buffer)
-            return `/uploads/${filename}`
-        }
+        // In a serverless environment like Vercel, we can't write to the local filesystem.
+        // For this implementation, we will store the Base64 strings directly in MongoDB.
         return img
     })
 }
