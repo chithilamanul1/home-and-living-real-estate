@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3001
 
 import mongoose from 'mongoose'
 
-const MONGO_URI = 'mongodb://mongo:fvquwo6ronfruznx@test-memoryapp-whqlxd:27017/?authSource=admin&directConnection=true'
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://mongo:fvquwo6ronfruznx@test-memoryapp-whqlxd:27017/?authSource=admin&directConnection=true'
 
 mongoose.connect(MONGO_URI)
     .then(() => console.log('✅ Connected to MongoDB'))
